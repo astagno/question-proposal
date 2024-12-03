@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #ffe6e6;
+    }
+    h1, h2 {
+      color: #ff3366;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button.yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    button.no {
+      background-color: #f44336;
+      color: white;
+    }
+    input[type="date"], input[type="text"] {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Will you be my Valentine?</h1>
+    <button class="yes" onclick="handleYes()">Yes</button>
+    <button class="no" onclick="handleNo()">No</button>
+    <br>
+    <img id="gif" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fcute-cat-gifs&psig=AOvVaw0mfSQzM6BQZbM9deYeUyGN&ust=1733279295673000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNiQldfGiooDFQAAAAAdAAAAABAJ" alt="Cute gif" style="margin-top: 20px;" width="300">
+  </div>
+
+  <script>
+    const content = document.getElementById("content");
+
+    function handleYes() {
+      content.innerHTML = `
+        <h1>Thank you &lt;3</h1>
+        <img id="yesGif" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fview%2Fthe-rizzler-gif-947463386818309967&psig=AOvVaw24cm9udy7FLEaQP_o1v4Ng&ust=1733279488321000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJCi_bLHiooDFQAAAAAdAAAAABAE" alt="sizzler" style="margin: 20px;" width="300">
+        <h2>We aren't done!</h2>
+        <button onclick="scheduleDate()">Continue</button>
+      `;
+    }
+
+    function handleNo() {
+      content.innerHTML = `
+        <h1>That's not nice :(</h1>
+        <h2>pleasepleasepleaseplease?</h2>
+        <button class="yes" onclick="handleYes()">Yes</button>
+        <button class="no" onclick="handleNo()">No</button>
+        <img id="noGif" src="https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif" alt="Sad gif" style="margin: 20px;" width="300">
+      `;
+    }
+
+    function scheduleDate() {
+      content.innerHTML = `
+        <form action="https://formsubmit.co/qnaanswer0@gmail.com" method="POST">
+          <h1>When are you free to celebrate this special occasion?</h1>
+          <input type="date" name="date" required>
+          <button type="submit">Next</button>
+        </form>
+      `;
+    }
+
+    function askFood() {
+      content.innerHTML = `
+        <form action="https://formsubmit.co/qnaanswer0@gmail.com" method="POST">
+          <h1>What would you like to eat?</h1>
+          <input type="text" name="food" placeholder="Type your answer here" required>
+          <button type="submit">Next</button>
+        </form>
+      `;
+    }
+
+    function askDessert() {
+      content.innerHTML = `
+        <form action="https://formsubmit.co/qnaanswer0@gmail.com" method="POST">
+          <h1>What will be for dessert?</h1>
+          <input type="text" name="dessert" placeholder="Type your answer here" required>
+          <button type="submit">Next</button>
+        </form>
+      `;
+    }
+
+    function askActivity() {
+      content.innerHTML = `
+        <form action="https://formsubmit.co/qnaanswer0@gmail.com" method="POST">
+          <h1>What will we do afterward?</h1>
+          <input type="text" name="activity" placeholder="Type your answer here" required>
+          <button type="submit">Submit</button>
+        </form>
+        `;
+    }
+
+    function thankYou() {
+      content.innerHTML = `
+        <h1>Thanks for your response!</h1>
+        <img id="yesGif" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fcat-with-flower-gifs&psig=AOvVaw1e41mCezj6VcLADc4I5x1-&ust=1733279596540000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIjj3-jHiooDFQAAAAAdAAAAABAR" alt="cat flower" style="margin: 20px;" width="300">
+       
+
+	<p>It will be noted and thought of until the date comes ;)</p>
+
+	`;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
